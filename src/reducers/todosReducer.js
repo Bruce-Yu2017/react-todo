@@ -54,14 +54,15 @@ export const todosReducer = (state = [], action) => {
         if (item.id !== id) {
           return item;
         }
-        const currentTodo = { ...item, name: updatedName, isEditing };
-        if (!isEditing) {
+        const currentTodo = { ...item, isEditing };
+        if (!isEditing && currentTodo.name !== updatedName) {
           const { editHistory } = currentTodo;
           if (!editHistory) {
             currentTodo["editHistory"] = [new Date().getTime()];
           } else {
             currentTodo["editHistory"].unshift(new Date().getTime());
           }
+          currentTodo.name = updatedName;
         }
 
         return currentTodo;
