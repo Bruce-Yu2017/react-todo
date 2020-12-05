@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/wake-up-alarm/static/css/main.7ec4469f.chunk.css",
-    "main.js": "/wake-up-alarm/static/js/main.f3d99882.chunk.js",
-    "main.js.map": "/wake-up-alarm/static/js/main.f3d99882.chunk.js.map",
-    "runtime-main.js": "/wake-up-alarm/static/js/runtime-main.d7f830eb.js",
-    "runtime-main.js.map": "/wake-up-alarm/static/js/runtime-main.d7f830eb.js.map",
-    "static/css/2.1a02f21c.chunk.css": "/wake-up-alarm/static/css/2.1a02f21c.chunk.css",
-    "static/js/2.63d69975.chunk.js": "/wake-up-alarm/static/js/2.63d69975.chunk.js",
-    "static/js/2.63d69975.chunk.js.map": "/wake-up-alarm/static/js/2.63d69975.chunk.js.map",
-    "index.html": "/wake-up-alarm/index.html",
-    "static/css/2.1a02f21c.chunk.css.map": "/wake-up-alarm/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.7ec4469f.chunk.css.map": "/wake-up-alarm/static/css/main.7ec4469f.chunk.css.map",
-    "static/js/2.63d69975.chunk.js.LICENSE.txt": "/wake-up-alarm/static/js/2.63d69975.chunk.js.LICENSE.txt"
+    "main.css": "/react-todo/static/css/main.7ec4469f.chunk.css",
+    "main.js": "/react-todo/static/js/main.f3d99882.chunk.js",
+    "main.js.map": "/react-todo/static/js/main.f3d99882.chunk.js.map",
+    "runtime-main.js": "/react-todo/static/js/runtime-main.6d1433d6.js",
+    "runtime-main.js.map": "/react-todo/static/js/runtime-main.6d1433d6.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/react-todo/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.63d69975.chunk.js": "/react-todo/static/js/2.63d69975.chunk.js",
+    "static/js/2.63d69975.chunk.js.map": "/react-todo/static/js/2.63d69975.chunk.js.map",
+    "index.html": "/react-todo/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/react-todo/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.7ec4469f.chunk.css.map": "/react-todo/static/css/main.7ec4469f.chunk.css.map",
+    "static/js/2.63d69975.chunk.js.LICENSE.txt": "/react-todo/static/js/2.63d69975.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d7f830eb.js",
+    "static/js/runtime-main.6d1433d6.js",
     "static/css/2.1a02f21c.chunk.css",
     "static/js/2.63d69975.chunk.js",
     "static/css/main.7ec4469f.chunk.css",
