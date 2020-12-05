@@ -1,0 +1,41 @@
+.todo-row {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+.status-col {
+  width: 110px;
+}
+
+.name-col {
+  width: 310px;
+}
+
+td {
+  position: relative;
+  vertical-align: middle !important;
+}
+tr.strikeout {
+  background-color: #bbe0bb;
+}
+
+tr.strikeout td:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+}
+
+tr.strikeout td:after {
+  content: "\00B7";
+  font-size: 1px;
+}
+
+.fa-trash:hover {
+  color: red;
+}
