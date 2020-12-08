@@ -6,7 +6,7 @@ import "./Todos.scss";
 import UpdateForm from "../UpdateForm/UpdateForm";
 
 const Todos = () => {
-  const { todos } = useSelector((state) => state);
+  const { todos, language } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const toggleComplete = (e, todo) => {
@@ -40,7 +40,8 @@ const Todos = () => {
                 placement={"top"}
                 overlay={
                   <Tooltip>
-                    Finished at {new Date(todo.finishedAt).toLocaleString()}
+                    {language.finishedAt}{" "}
+                    {new Date(todo.finishedAt).toLocaleString()}
                   </Tooltip>
                 }
               >
@@ -57,7 +58,7 @@ const Todos = () => {
                 overlay={
                   <Tooltip>
                     <div className="d-flex flex-column justify-content-center">
-                      Edit History:
+                      {language.editHistory}:
                       {todo.editHistory && todo.editHistory.length > 0
                         ? todo.editHistory.map((his) => {
                             return (
@@ -100,10 +101,10 @@ const Todos = () => {
           <thead>
             <tr>
               <th className="status-col">#</th>
-              <th className="name-col">TO DO</th>
-              <th>Created Date</th>
-              <th className="status-col">Status</th>
-              <th>Action</th>
+              <th className="name-col">{language.content}</th>
+              <th>{language.createdDate}</th>
+              <th className="status-col">{language.status}</th>
+              <th>{language.action}</th>
             </tr>
           </thead>
           <tbody>{renderTodo()}</tbody>

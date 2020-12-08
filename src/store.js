@@ -2,9 +2,11 @@ import { createStore, combineReducers } from "redux";
 
 import { composeWithDevTools } from "redux-devtools-extension";
 import { todosReducer } from "./reducers/todosReducer";
+import { languageReducer } from "./reducers/languageReducer";
 
 const reducers = combineReducers({
   todos: todosReducer,
+  language: languageReducer,
 });
 
 const initObj = {

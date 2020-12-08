@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTodo, sortTodo } from "../../actions/todoAction";
 
 const Toolbar = () => {
-  const { todos } = useSelector((state) => state);
-  const [sortType, setSortType] = useState("Featured");
+  const { todos, language } = useSelector((state) => state);
+  const [sortType, setSortType] = useState("featured");
   const [todoName, setTodoName] = useState("");
   const dispatch = useDispatch();
 
@@ -21,20 +21,20 @@ const Toolbar = () => {
     setSortType(type);
     const state = JSON.parse(localStorage.getItem("todosInStorage"));
     const { todos } = state;
-    if (type === "Featured") {
+    if (type === "featured") {
       dispatch(sortTodo(todos));
     }
-    if (type.includes("Date")) {
+    if (type.includes("date")) {
       todos.sort((a, b) => {
         const sortType =
-          type === "Date(Old To New)"
+          type === "dateOldToNew"
             ? a.createdAt - b.createdAt
             : b.createdAt - a.createdAt;
         return sortType;
       });
       dispatch(sortTodo(todos));
     }
-    if (type === "Status") {
+    if (type === "status") {
       todos.sort((a, b) => {
         if (a.finished < b.finished) {
           return -1;
@@ -60,7 +60,7 @@ const Toolbar = () => {
         >
           <Form.Control
             type="text"
-            placeholder="Add Todo"
+            placeholder={language.addToDo}
             size="sm"
             className="mr-sm-2 shadow-none"
             value={todoName}
@@ -74,37 +74,37 @@ const Toolbar = () => {
         </Form>
         {todos.length > 0 && (
           <DropdownButton
-            title={`Sort by: ${sortType}`}
+            title={`${language.sortBy}: ${language[sortType]}`}
             size="sm"
             variant="secondary"
           >
             <Dropdown.Item
               onClick={() => {
-                sortBy("Featured");
+                sortBy("featured");
               }}
             >
-              Featured
+              {language.featured}
             </Dropdown.Item>
             <Dropdown.Item
               onClick={() => {
-                sortBy("Date(New To Old)");
+                sortBy("dateNewToOld");
               }}
             >
-              Date(New To Old)
+              {language.dateNewToOld}
             </Dropdown.Item>
             <Dropdown.Item
               onClick={() => {
-                sortBy("Date(Old To New)");
+                sortBy("dateOldToNew");
               }}
             >
-              Date(Old To New)
+              {language.dateOldToNew}
             </Dropdown.Item>
             <Dropdown.Item
               onClick={() => {
-                sortBy("Status");
+                sortBy("status");
               }}
             >
-              Status
+              {language.status}
             </Dropdown.Item>
           </DropdownButton>
         )}
