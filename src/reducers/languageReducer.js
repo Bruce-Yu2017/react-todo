@@ -12,6 +12,7 @@ export const languageReducer = (state = english, action) => {
       } else if (action.payload === "spanish") {
         return spanish;
       }
+      break;
     default:
       return state;
   }

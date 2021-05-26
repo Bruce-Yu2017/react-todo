@@ -23,12 +23,14 @@ const TodoNav = () => {
     if (val.length === 0) {
       temp.map((todo) => {
         todo.filtered = false;
+        return null;
       });
       dispatch(filterTodos(temp));
     } else {
       temp.map((todo) => {
         const name = todo.name.toLowerCase();
         todo.filtered = !name.includes(text);
+        return null;
       });
       dispatch(filterTodos(temp));
     }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Table, OverlayTrigger, Tooltip, ListGroup } from "react-bootstrap";
+import { Table, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { markAsCompleted, deleteTodo } from "../../actions/todoAction";
 import "./Todos.scss";
 import UpdateForm from "../UpdateForm/UpdateForm";
